@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{ Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Switch, Route, Link } from "react-router-dom";
+import "./App.css";
+//import faceactive && highactive
+import FaceActive from './components/FaceActive';
+import HighActive from './components/HighActive';
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <nav className='header'>
+          <ul>
+            <li>
+              <Link to='/faceactive'>高压图纸处理</Link>
+            </li>
+            <li>
+              <Link to='/highactive'>低压图纸处理</Link>
+            </li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route path="/faceactive">
+            <FaceActive></FaceActive>
+          </Route>
+          <Route path="/highactive">
+            <HighActive />
+          </Route>
+          <Route path="/">
+            <FaceActive></FaceActive>
+          </Route>
+        </Switch>
+      </div>
+    );
+  }
 }
+
 
 export default App;

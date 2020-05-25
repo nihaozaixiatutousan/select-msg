@@ -1,0 +1,61 @@
+.redcolor{
+  color: red;
+}
+h3{
+  margin:5px;
+}
+.bodes {
+  padding: 50px 100px;
+  background-color:#D7E7F5;
+
+}
+/*a  upload */
+.a-upload {
+  position: relative;
+  margin: 0 20px;
+  padding: 10px 20px;
+  height: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  color: #0E0D11;
+  background: #5E656F;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  overflow: hidden;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1
+}
+
+.a-upload  input {
+  position: absolute;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  cursor: pointer
+}
+
+.a-upload:hover {
+  color: #444;
+  background: #eee;
+  border-color: #ccc;
+  text-decoration: none
+}
+
+textarea{
+  margin: 20px;
+  width: 200px;
+  height: 500px;
+}
+.bodes .upfliebtn{
+  margin: 20px;
+  width: 70px;
+  padding:10px ;
+  height: 3em;
+  text-align: center;
+  border:none;
+  background-color: #5E656F;
+}
